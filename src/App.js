@@ -1,10 +1,14 @@
-import logo from './logo.svg';
 import './App.css';
+import { Home } from './components/Home';
+import { Header } from './components/Header';
+import { Banner } from './components/Banner';
 
 function App() {
   return (
     <div className="App">
-      <h1>AirD&C</h1>
+      <Header />
+      <Home />
+      <Banner />
     </div>
   );
 }
