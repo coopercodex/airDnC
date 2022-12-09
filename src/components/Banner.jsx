@@ -1,10 +1,17 @@
 import React from 'react'
+import { useState } from 'react'
+import { Search } from './Search'
+
 
 export const Banner = () => {
+  const [showSearch, setShowSearch] = useState(false);
+
   return (
     <div className='banner'>
       <div className='banner-search'>
-        <button className='search-button'>Search Dates</button>
+        {showSearch && <Search />}
+        <button onClick={() => setShowSearch(!showSearch)}
+         className='search-button'>Search Dates</button>
       </div>
       <div className='banner-info'>
         <h1>Go out and get your imagination</h1>
