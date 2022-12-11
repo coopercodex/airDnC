@@ -11,7 +11,7 @@ export const Banner = () => {
       <div className='banner-search'>
         {showSearch && <Search />}
         <button onClick={() => setShowSearch(!showSearch)}
-         className='search-button'>Search Dates</button>
+         className='search-button'>{showSearch ? "Hide" : "Search Dates"}</button>
       </div>
       <div className='banner-info'>
         <h1>Go out and get your imagination</h1>
