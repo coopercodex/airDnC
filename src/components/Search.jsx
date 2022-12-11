@@ -26,7 +26,7 @@ export const Search = () => {
        [selectionRange]}
        onChange={handleSelect} />
        <h2>
-        NUmber of Guests
+        Number of Guests
         <BsPeopleFill />
        </h2> 
        <input 
