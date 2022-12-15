@@ -210,3 +210,46 @@
   padding: 5px;
   font-size: 14px;
 }
+
+.search-results-container {
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.search-results {
+  display: flex;
+  position: relative;
+  margin: 20px;
+  padding: 20px;
+  border-bottom: 1px solid rgb(174, 172, 172);
+  cursor: pointer;
+}
+
+.search-results:hover {
+  opacity: 0.8;
+}
+
+.search-results img {
+  height: 200px;
+  /* width: 350px; */
+  border-radius: 10px;
+  /* overflow: hidden; */
+}
+
+.search-results-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-left: 20px;
+}
+
+.search-results-heart {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+}
+
+.search-results-infoTop {
+  width: 40vw;
+}
