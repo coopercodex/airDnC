@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
+import { Link } from 'react-router-dom';
 import { Search } from './Search'
 
 
@@ -17,7 +18,7 @@ export const Banner = () => {
         <h1>Go out and get your imagination</h1>
         <h5>Plan a different kind of getaway to uncover the hidden gems near you.</h5>
         <button>
-          Explore Nearby
+          <Link style={{textDecoration: 'none', color: 'black'}} to="/search" >Explore Nearby</Link>
         </button>
       </div>
     </div>
