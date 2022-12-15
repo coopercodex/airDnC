@@ -2,8 +2,8 @@ import React, { useState } from 'react'
 import { DateRangePicker } from 'react-date-range'
 import "react-date-range/dist/styles.css"
 import "react-date-range/dist/theme/default.css"
-import { MdPeople } from 'react-icons/md'
 import {BsPeopleFill} from 'react-icons/bs'
+import { Link } from 'react-router-dom'
 
 
 export const Search = () => {
@@ -33,7 +33,7 @@ export const Search = () => {
        min={0}
        defaultValue={2}
        type='number'/>
-       <button>Search AirDnC</button>
+       <Link to="/search">Search AirDnC</Link>
     </div>
   )
 }

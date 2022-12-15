@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
-import { AiOutlineHeart } from 'react-icons/ai'
+import { FiHeart } from 'react-icons/fi'
 import { AiFillStar } from 'react-icons/ai'
 
 export const SearchResult = () => {
@@ -24,7 +24,7 @@ export const SearchResult = () => {
       {location.map(place => (
         <div className='search-results' key={`${place.fields.id}`}>
           <img src={`${place?.fields.thumbnail_url}`} alt='house-layout' />
-          <AiOutlineHeart className='search-results-heart'/>
+          <FiHeart className='search-results-heart' />
           <div className='search-results-info'>
             <div className='search-results-infoTop'>
               <h3>{place?.fields.property_type}</h3>
@@ -35,7 +35,7 @@ export const SearchResult = () => {
             <div className='search-results-infoBottom'>
               <div className='search-results-stars'>
                 <p>
-                  <AiFillStar />
+                  <AiFillStar color='red'/>
                   {place.fields.review_scores_rating}/100
                 </p>
               </div>
