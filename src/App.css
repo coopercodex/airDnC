@@ -51,6 +51,17 @@
   margin-right: 80px;
 }
 
+.header-wishlist-count {
+  margin-left: -25px;
+  margin-bottom: 20px;
+  font-weight: 500;
+  padding: 2px;
+  color: white;
+  background-color: #FF385C !important;;
+  border-radius: 10px ;
+  border: 1px solid white ;
+}
+
 .banner {
   background: url("https://images.pexels.com/photos/2251247/pexels-photo-2251247.jpeg?auto=compress&cs=tinysrgb&w=1260&h=450&dpr=2") center center;
   height: 50vh;
@@ -349,6 +360,17 @@
   bottom: 20px;
   right: 30px;
 }
+
+.wishlist {
+  color: black;
+  text-decoration: none;
+}
+
+.wishlist:hover {
+  color: rgb(98, 96, 96);
+}
+
+
 
 
 

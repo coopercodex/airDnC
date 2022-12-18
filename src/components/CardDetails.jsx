@@ -3,10 +3,15 @@ import { useParams } from 'react-router-dom'
 import endpoints from '../endpoints'
 import { FiHeart } from 'react-icons/fi'
 import { AiFillStar } from 'react-icons/ai'
+import { useDispatch } from 'react-redux'
+import { addToFavorite } from '../slices/favoriteSlice'
+
 
 export const CardDetails = () => {
   const [location, setLocation] = useState([])
   const { cardId } = useParams();
+  const dispatch = useDispatch();
+
 
   useEffect(() => {
     getData()
@@ -19,13 +24,19 @@ export const CardDetails = () => {
         setLocation(data.records))
   }
 
-
+  const addLocationToFavorites = () => {
+    const places = {
+      location
+    }
+    dispatch(addToFavorite(places))
+  }
+  // console.log(addLocationToFavorites())
   console.log(location)
   return (location.length > 0) ? (
     <div className='card-search-results-container'>
-      {location.map(place => (
+      {location?.map(place => (
         <div className='card-search-results' key={`${place?.fields.id}`}>
-          <h4 className='search-results-heart-title'>Save</h4> <FiHeart size={20} className='card-search-results-heart' />
+          <h4 className='search-results-heart-title'>Save</h4> <FiHeart size={30} className='card-search-results-heart' onClick={addLocationToFavorites} />
           <div className='search-results-info'>
             <div className='card-search-results-infoTop'>
               <h3>{place?.fields.name}</h3>
@@ -50,6 +61,6 @@ export const CardDetails = () => {
         </div>
       ))}
     </div>
-  ) : <div className='loading-container'><img className='loading' src='https://miro.medium.com/max/1400/1*Gvgic29bgoiGVLmI6AVbUg.gif' /></div>
+  ) : <div className='loading-container'><img className='loading' src='https://miro.medium.com/max/1400/1*Gvgic29bgoiGVLmI6AVbUg.gif' alt='loading dots' /></div>
 
 }
