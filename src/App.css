@@ -8,7 +8,10 @@
   z-index: 100;
   width: 100%;
 }
-
+.loading-container {
+  display: flex;
+  justify-content: center;
+}
 .loading {
   text-align: center;
   padding: 20px;

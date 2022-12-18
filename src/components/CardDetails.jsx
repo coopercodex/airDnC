@@ -25,7 +25,7 @@ export const CardDetails = () => {
     <div className='card-search-results-container'>
       {location.map(place => (
         <div className='card-search-results' key={`${place?.fields.id}`}>
-          <h4 className='search-results-heart-title'>Save</h4> <FiHeart className='card-search-results-heart' />
+          <h4 className='search-results-heart-title'>Save</h4> <FiHeart size={20} className='card-search-results-heart' />
           <div className='search-results-info'>
             <div className='card-search-results-infoTop'>
               <h3>{place?.fields.name}</h3>
@@ -35,7 +35,7 @@ export const CardDetails = () => {
                 {place?.fields.review_scores_rating}/100
               </p>
               <img src={`${place?.fields.xl_picture_url}`} alt='house-layout' />
-              <h4 className='card-details-type'>{place?.fields.room_type}</h4>
+              <h3 className='card-details-type'>{place?.fields.room_type}</h3>
               <p>____</p>
               <p>{place?.fields.description}</p>
               <div className='search-results-infoBottom'>
@@ -50,6 +50,6 @@ export const CardDetails = () => {
         </div>
       ))}
     </div>
-  ) : <h1 className='loading'>Loading...</h1>
+  ) : <div className='loading-container'><img className='loading' src='https://miro.medium.com/max/1400/1*Gvgic29bgoiGVLmI6AVbUg.gif' /></div>
 
 }
