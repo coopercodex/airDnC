@@ -18,7 +18,7 @@ export const Banner = () => {
         <h1>Go out and get your imagination</h1>
         <h5>Plan a different kind of getaway to uncover the hidden gems near you.</h5>
         <button>
-          <Link style={{textDecoration: 'none', color: 'black'}} to="/search" >Explore Nearby</Link>
+          <Link style={{textDecoration: 'none', color: 'black'}} to="/search" >Click To Explore A Random Destination!</Link>
         </button>
       </div>
     </div>

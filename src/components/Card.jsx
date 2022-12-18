@@ -37,5 +37,5 @@ export const Card = ({ title, getUrl, rowID }) => {
         ))}
       </div>
     </>
-  ) : <img className='loading' src='https://miro.medium.com/max/1400/1*Gvgic29bgoiGVLmI6AVbUg.gif'/>
+  ) : <div className='loading-container'><img className='loading' src='https://miro.medium.com/max/1400/1*Gvgic29bgoiGVLmI6AVbUg.gif'/></div>
 }
