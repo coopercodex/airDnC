@@ -3,7 +3,7 @@ import React from 'react'
 export const Wishlist = () => {
   return (
     <div>
-      <h1>asdfasdfsad</h1>
+      <h1>Wishlist Page Is Under Construction...</h1>
     </div>
   )
 }
