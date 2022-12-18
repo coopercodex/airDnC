@@ -11,15 +11,16 @@ export const SearchResult = () => {
   }, [])
 
   const getData = () => {
+        
     fetch('https://public.opendatasoft.com/api/records/1.0/search/?dataset=airbnb-listings&q=&facet=host_response_time&facet=host_response_rate&facet=host_verifications&facet=city&facet=country&facet=property_type&facet=room_type&facet=bed_type&facet=amenities&facet=availability_365&facet=cancellation_policy&facet=features&refine.city=berlin')
       .then(res => res.json())
       .then(data => {
-        console.log(data)
+        // console.log(data)
         setLocation(data.records)
       })
   }
-
-  return (
+  console.log(location)
+  return (location.length > 0) ?  (
     <div className='search-results-container'>
       {location.map(place => (
         <div className='search-results' key={`${place.fields.id}`}>
@@ -46,6 +47,6 @@ export const SearchResult = () => {
           </div>
         </div>
       ))}
-    </div>
-  )
+      </div>
+  ) : <h1 className='loading'>Loading...</h1> 
 }
