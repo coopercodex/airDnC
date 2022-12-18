@@ -21,6 +21,20 @@ export const Header = () => {
       <div className='header-right'>
         <p>Become a Host</p>
         <GrLanguage />
+        <section className="p-menu1">
+          <nav id="navbar" className="navigation" role="navigation">
+            <input id="toggle1" type="checkbox" />
+            <label className="hamburger1" htmlFor="toggle1">
+              <div className="top"></div>
+              <div className="meat"></div>
+              <div className="bottom"></div>
+            </label>
+            <nav className="menu1">
+              <Link className="link1" to="/">Home</Link>
+              <Link className="link1" to="/wishlist">Wishlist</Link>
+            </nav>
+          </nav>
+        </section>
         <Link to='wishlist' className='wishlist'><RxAvatar size={25} /> </Link>
         <span className='header-wishlist-count'>{locations.length}</span>
       </div>

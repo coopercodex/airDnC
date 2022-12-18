@@ -52,14 +52,15 @@
 }
 
 .header-wishlist-count {
-  margin-left: -25px;
+  /* position: static; */
+  margin-left: -50px;
   margin-bottom: 20px;
   font-weight: 500;
   padding: 2px;
   color: white;
   background-color: #FF385C !important;;
   border-radius: 10px ;
-  border: 1px solid white ;
+  border: 1px solid white;
 }
 
 .banner {
@@ -67,6 +68,7 @@
   height: 50vh;
   /* object-fit:  contain; */
   position: relative;
+
 }
 
 .banner-info {
@@ -369,6 +371,121 @@
 .wishlist:hover {
   color: rgb(98, 96, 96);
 }
+
+.link1 {
+  color: black;
+  text-decoration: none;
+  border-bottom: 1px solid rgb(220, 217, 217);
+}
+
+.p-menu1{
+   height: 100%;
+}
+
+
+.hamburger1 {
+  /* height: 45px; */
+  /* margin: 20px; */
+  display: -ms-grid;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  justify-items: center;
+  z-index: 120;
+}
+
+.hamburger1 div {
+  background-color: rgb(61, 61, 61);
+  position: relative;
+  width: 40px;
+  height: 3px;
+  margin-top: 2px;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+#toggle1 {
+  display: none;
+}
+
+#toggle1:checked + .hamburger1 .top {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  margin-top: 22.5px;
+}
+.hamburger1 .top {
+  width: 25px;
+}
+
+.hamburger1 .meat {
+  width: 25px;
+}
+
+.hamburger1 .bottom {
+  width: 25px;
+}
+
+#toggle1:checked + .hamburger1 .meat {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  margin-top: -5px;
+}
+
+#toggle1:checked + .hamburger1 .bottom {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+#toggle1:checked ~ .menu1 {
+  margin-left: -80px;
+  height: 170px;
+  width: 150px;
+  border-radius: 10px;
+  box-shadow: 0px 6px 18px -9px rgba(0, 0, 0, 0.75);
+}
+
+.menu1 {
+  position: absolute;
+  width: 100%;
+  background-color: white;
+  margin: 0;
+  display: -ms-grid;
+  display: grid;
+  grid-template-rows: 1fr repeat(4, 0.5fr);
+  grid-row-gap: 25px;
+  padding: 0;
+  list-style: none;
+  clear: both;
+  width: auto;
+  text-align: center;
+  height: 0px;
+  overflow: hidden;
+  transition: height .4s ease;
+  z-index: 120;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.menu1 a:first-child {
+  margin-top: 40px;
+}
+
+.menu1 a:last-child {
+  margin-bottom: 40px;
+}
+
+.link1 {
+  width: 100%;
+  margin: 0;
+  padding: 10px 0;
+  font: 400 15px 'Oswald', sans-serif;
+}
+
+.link1:hover {
+  background-color: rgb(247, 241, 241);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
 
 
 
