@@ -31,12 +31,12 @@ export const CardDetails = () => {
     dispatch(addToFavorite(places))
   }
   // console.log(addLocationToFavorites())
-  console.log(location)
+  // console.log(location)
   return (location.length > 0) ? (
     <div className='card-search-results-container'>
       {location?.map(place => (
         <div className='card-search-results' key={`${place?.fields.id}`}>
-          <h4 className='search-results-heart-title'>Save</h4> <FiHeart size={30} className='card-search-results-heart' onClick={addLocationToFavorites} />
+          <h4 className='search-results-heart-title'>Save</h4> <FiHeart size={20} className='card-search-results-heart' onClick={addLocationToFavorites} />
           <div className='search-results-info'>
             <div className='card-search-results-infoTop'>
               <h3>{place?.fields.name}</h3>
