@@ -3,11 +3,17 @@ import { useState, useEffect } from 'react'
 import { FiHeart } from 'react-icons/fi'
 import { AiFillStar } from 'react-icons/ai'
 import { Link } from 'react-router-dom'
+import { useDispatch } from 'react-redux'
+import { addToFavorite } from '../slices/favoriteSlice'
+
 
 export const SearchResult = () => {
   const [location, setLocation] = useState([])
   const cities = ['Paris', 'London', 'Berlin', 'New+York', 'Roma', 'Barcelona', 'Brooklyn', 'Austin', 'Amsterdam', 'Toronto', 'Vienna', 'Saint-Gilles', 'Bondi', 'New+Orleans']
   const [randomCity, setRandomCity] = useState(cities[Math.floor(Math.random() * cities.length)])
+  const dispatch = useDispatch();
+
+
 
   useEffect(() => {
     getData()
@@ -20,15 +26,23 @@ export const SearchResult = () => {
         setLocation(data.records)
       })
   }
-  console.log(location)
+
+  const addLocationToFavorites = () => {
+    const places = {
+      location
+    }
+    dispatch(addToFavorite(places))
+  }
+
+  // console.log(locations)
   return (location.length > 0) ?  (
     <div className='search-results-container'>
-      {location.map(place => (
+      {location?.map(place => (
         <div className='search-results' key={`${place.fields.id}`}>
           <Link to={`/cardDetails/${place.fields.id}`}> 
               <img src={`${place?.fields.thumbnail_url}`} alt='house-layout' />
               </Link>
-          <FiHeart className='search-results-heart' />
+          <FiHeart className='search-results-heart' onClick={addLocationToFavorites} />
           <div className='search-results-info'>
             <div className='search-results-infoTop'>
               <h3>{place?.fields.property_type}</h3>
