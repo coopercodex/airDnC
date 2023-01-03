@@ -8,19 +8,25 @@
   z-index: 100;
   width: 100%;
 }
+
 .loading-container {
   display: flex;
   justify-content: center;
 }
+
 .loading {
   text-align: center;
   padding: 20px;
 }
 
 .header-icon {
-  object-fit: contain;
-  height: 100px;
+  background-color: #FF5A5F;
+  color: white;
+  padding: 10px;
   margin-left: 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  margin: 5px;
 }
 
 
@@ -58,8 +64,9 @@
   font-weight: 500;
   padding: 2px;
   color: white;
-  background-color: #FF385C !important;;
-  border-radius: 10px ;
+  background-color: #FF385C !important;
+  ;
+  border-radius: 10px;
   border: 1px solid white;
 }
 
@@ -82,7 +89,7 @@
 }
 
 .banner-info>button {
-  background-color: #ff7779;
+  background-color: #FF5A5F;
   color: white;
   padding: 5px;
   margin-top: 20px;
@@ -144,7 +151,7 @@
   outline-width: 0;
 }
 
-.search > a {
+.search>a {
   position: absolute;
   left: 0;
   top: 480px;
@@ -157,7 +164,7 @@
   text-align: center;
 }
 
-.search > a:hover {
+.search>a:hover {
   background-color: rgb(250, 248, 248);
   color: #ff7779;
 }
@@ -210,11 +217,12 @@
   border: 1;
 }
 
-.card-info > h3 {
+.card-info>h3 {
   font-size: 18px;
   font-weight: 600;
 }
-.card-info > h4 {
+
+.card-info>h4 {
   font-size: 14=5px;
   font-weight: 500;
   margin-top: 8px;
@@ -225,12 +233,12 @@
   border-top: 1 px solid black;
   padding: 20px;
   background-color: rgba(245, 243, 243, 0.753);
-   bottom: 0;
-   text-align: center;
-   bottom: 0;
+  bottom: 0;
+  text-align: center;
+  bottom: 0;
 }
 
-.footer > p {
+.footer>p {
   padding: 5px;
   font-size: 14px;
 }
@@ -238,7 +246,7 @@
 .search-results-container {
   display: flex;
   flex-direction: column;
-  
+
 }
 
 .search-results {
@@ -282,12 +290,12 @@
   width: 40vw;
 }
 
-.search-results > h3 {
+.search-results>h3 {
   font-weight: 300;
   margin-top: 10px;
 }
 
-.search-results-infoTop > p {
+.search-results-infoTop>p {
   margin-top: 10px;
   font-size: 15px;
   color: gray;
@@ -298,7 +306,7 @@
   justify-content: space-between;
 }
 
-.search-results-price > p {
+.search-results-price>p {
   text-align: right;
 }
 
@@ -336,10 +344,10 @@
 }
 
 .card-details-type {
- margin-top: 10px;
+  margin-top: 10px;
 }
 
-.card-search-results-infoTop > p {
+.card-search-results-infoTop>p {
   width: 50vw;
   margin-top: 10px;
   font-size: 20px;
@@ -378,8 +386,8 @@
   border-bottom: 1px solid rgb(220, 217, 217);
 }
 
-.p-menu1{
-   height: 100%;
+.p-menu1 {
+  height: 100%;
 }
 
 
@@ -407,11 +415,12 @@
   display: none;
 }
 
-#toggle1:checked + .hamburger1 .top {
+#toggle1:checked+.hamburger1 .top {
   -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
+  transform: rotate(-45deg);
   margin-top: 22.5px;
 }
+
 .hamburger1 .top {
   width: 25px;
 }
@@ -424,18 +433,18 @@
   width: 25px;
 }
 
-#toggle1:checked + .hamburger1 .meat {
+#toggle1:checked+.hamburger1 .meat {
   -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  transform: rotate(45deg);
   margin-top: -5px;
 }
 
-#toggle1:checked + .hamburger1 .bottom {
+#toggle1:checked+.hamburger1 .bottom {
   -webkit-transform: scale(0);
-          transform: scale(0);
+  transform: scale(0);
 }
 
-#toggle1:checked ~ .menu1 {
+#toggle1:checked~.menu1 {
   margin-left: -80px;
   height: 170px;
   width: 150px;
@@ -485,10 +494,3 @@
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-
-
-
-
-
-
- 

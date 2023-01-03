@@ -11,8 +11,8 @@ export const Header = () => {
   const locations = useSelector(selectItems)
   return (
     <div className='header'>
-      <Link to='/'> <img className='header-icon' src='https://i0.wp.com/charleshoustonbar.org/wp-content/uploads/2019/12/Airbnb-logo.jpg' alt='logo' /> </Link>
-
+      <Link to='/' style={{textDecoration: 'none'}}> <h1 className='header-icon'>airdnc</h1></Link>
+      {/* src='https://i0.wp.com/charleshoustonbar.org/wp-content/uploads/2019/12/Airbnb-logo.jpg' alt='logo'  */}
       <div className='header-middle'>
         <input
           type='text' />
