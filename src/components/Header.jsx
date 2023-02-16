@@ -13,11 +13,11 @@ export const Header = () => {
     <div className='header'>
       <Link to='/' style={{textDecoration: 'none'}}> <h1 className='header-icon'>airdnc</h1></Link>
       {/* src='https://i0.wp.com/charleshoustonbar.org/wp-content/uploads/2019/12/Airbnb-logo.jpg' alt='logo'  */}
-      <div className='header-middle'>
+      {/* <div className='header-middle'>
         <input
           type='text' />
-        <BiSearchAlt2 />
-      </div>
+        // {/* <BiSearchAlt2 /> */}
+      {/* </div> */} 
       <div className='header-right'>
         <p>Become a Host</p>
         <GrLanguage />
